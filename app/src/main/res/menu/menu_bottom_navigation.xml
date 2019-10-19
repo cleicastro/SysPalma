@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:orderInCategory="100"
+        android:title="@string/menu_nav_home"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/atividades"
+        android:icon="@drawable/ic_apps"
+        android:orderInCategory="100"
+        android:title="@string/menu_nav_atividade"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/fechar"
+        android:icon="@drawable/ic_sair"
+        android:orderInCategory="100"
+        android:title="@string/menu_nav_voltar"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+</menu>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Tratos Culturais">
+        <menu android:checkableBehavior="single">
+            <item
+                android:id="@+id/adubacao"
+                android:icon="@drawable/ic_spa_black_24dp"
+                android:title="Adubação" />
+            <item
+                android:id="@+id/rocagem"
+                android:icon="@drawable/ic_spa_black_24dp"
+                android:title="Roçagem" />
+            <item
+                android:id="@+id/coroamento"
+                android:icon="@drawable/ic_spa_black_24dp"
+                android:title="Coroamento" />
+            <item
+                android:id="@+id/poda"
+                android:icon="@drawable/ic_spa_black_24dp"
+                android:title="Poda" />
+            <item
+                android:id="@+id/herbicida"
+                android:icon="@drawable/ic_spa_black_24dp"
+                android:title="Herbicida" />
+        </menu>
+    </item>
+    <item android:title="Colheita">
+        <menu>
+            <item
+                android:id="@+id/corte"
+                android:icon="@drawable/ic_map_black_24dp"
+                android:title="Corte" />
+            <item
+                android:id="@+id/carreamento"
+                android:icon="@drawable/ic_map_black_24dp"
+                android:title="Carreamento" />
+            <item
+                android:id="@+id/transporte_cff"
+                android:icon="@drawable/ic_caminhao"
+                android:title="Transporte de CFF" />
+        </menu>
+    </item>
+    <item android:title="Relatório diário de safra">
+        <menu>
+            <item
+                android:id="@+id/pluviometria"
+                android:icon="@drawable/ic_chuva"
+                android:title="Pluviometria" />
+        </menu>
+    </item>
+    <item android:title="Configurações">
+        <menu>
+            <item
+                android:id="@+id/fichas_menu"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="Listar todas as fichas" />
+            <item
+                android:id="@+id/config"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Configurações" />
+            <item
+                android:id="@+id/online"
+                android:icon="@drawable/ic_wifi_black_24dp"
+                android:title="SysPalma Online" />
+        </menu>
+    </item>
+
+</menu>

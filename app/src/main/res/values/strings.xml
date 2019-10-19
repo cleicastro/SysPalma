@@ -1,0 +1,241 @@
+<resources>
+    <string name="app_name">SysPalma Mobile</string>
+
+    <string name="speech_prompt">Say something&#8230;</string>
+    <string name="speech_not_supported">Sorry! Your device doesn\'t support speech input</string>
+    <string name="tap_on_mic">Pressione o microfone para falar</string>
+
+    <string name="tab_text_1">Novo Apontamento</string>
+    <string name="tab_text_2">Registros</string>
+    <string name="tab_text_3">Estatísticas</string>
+    <string name="tab_text_4">Insumo</string>
+
+    <string name="tab_novo_1">Apontamento</string>
+    <string name="tab_novo_2">Registros</string>
+    <string name="tab_novo_3">Registros com erro</string>
+    <string name="tab_novo_4">Maquinários</string>
+
+    <string name="tab_colheita_1">Corte</string>
+    <string name="tab_colheita_2">Carreamento</string>
+    <string name="tab_colheita_3">Transporte</string>
+    <string name="tab_colheita_4">Industria</string>
+    <string name="tab_colheita_5">Ciclo</string>
+
+    <string name="tab_tratos_1">Adubação</string>
+    <string name="tab_tratos_2">Roçagem</string>
+    <string name="tab_tratos_3">Coroamento</string>
+    <string name="tab_tratos_4">Poda</string>
+    <string name="tab_tratos_5">Herbicida</string>
+
+    <string name="tab_fito_1">Fitossanidade</string>
+    <string name="tab_fito_2">Rhynchophorus</string>
+    <string name="tab_fito_3">Cirurgia e Erradicação</string>
+    <string name="tab_fito_4">Outras Atividades</string>
+
+    <string name="menu_nav_home">Home</string>
+    <string name="menu_nav_atividade">Atividades</string>
+    <string name="menu_nav_voltar">Voltar</string>
+    <string name="menu_nav_atuzalizar">Atualizar</string>
+
+    <string name="action_settings">Configurações</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_painel">Painel</string>
+    <string name="grid_layout">GRID LAYOUT</string>
+    <string name="todo">TODO</string>
+    <string name="calendars">Calendars</string>
+    <string name="title_activity_colheita">colheita</string>
+    <string name="title_activity_frota">frota</string>
+    <string name="title_activity_fito">fitossanidade</string>
+
+    <string-array name="array_atividades">
+        <item>CORTE</item>
+        <item>SERVIÇOS GERAIS</item>
+        <item>SERVIÇOS ESPECIAIS</item>
+        <item>ATESTADO MÉDICO</item>
+        <item>FOLGA</item>
+        <item>FALTA</item>
+        <item>FÉRIAS</item>
+    </string-array>
+    <string-array name="array_origem_agf">
+        <item>SELECIONE UMA ORIGEM</item>
+        <item>São João do Sauá</item>
+        <item>Nova Aliança</item>
+        <item>Km 14/Irituia</item>
+        <item>Nova Betel</item>
+        <item>Perseverança</item>
+    </string-array>
+    <string-array name="array_atividades_frota">
+        <item>SELECIONE UMA ATIVIDADE</item>
+        <item>1 -  ROÇAGEM SIMPLES</item>
+        <item>2 -  ROÇAGEM CRUZADA</item>
+        <item>3 -  ADUBAÇÃO</item>
+        <item>4 -  SÁBADO</item>
+        <item>5 -  DOMINGO</item>
+        <item>6 -  FERIADO</item>
+        <item>7 -  SEM ATIVIDADE</item>
+        <item>8 -  MANUTENÇÃO PREVENTIVA</item>
+        <item>9 -  MANUTENÇÃO CORRETIVA</item>
+        <item>10 -  CONTROLE QUÍMICO</item>
+        <item>11 -  PLAINA</item>
+        <item>12 -  CARREAMENTO</item>
+        <item>13 -  DESLOCAMENTO INICIAL</item>
+        <item>14 -  DESLOCAMENTO P CAIXA</item>
+        <item>15 -  DESLOCAMENTO ALMOÇO</item>
+        <item>16 -  DESLOCAMENTO P QUIMICA</item>
+        <item>17 -  DESLOCAMENTO FAZENDA</item>
+        <item>18 -  DESLOCAMENTO ENT PARCELA</item>
+        <item>19 -  DESLOCAMENTO FINAL</item>
+        <item>20 -  ASSISTENCIA TÉCNICA</item>
+        <item>21 -  SEM ATIVIDADE</item>
+        <item>22 -  MANUTENÇÃO</item>
+        <item>23 -  FERIADO</item>
+        <item>24 -  APOIO A ROÇAGEM</item>
+        <item>25 -  APOIO A ADUBAÇÃO</item>
+        <item>26 -  APOIO A COLHEITA</item>
+        <item>27 -  APOIO A COROA</item>
+        <item>28 -  APOIO AO CARREAMENTO</item>
+        <item>29 -  APOIO A QUÍMICA</item>
+        <item>30 -  APOIO A PODA</item>
+        <item>31 -  APOIO A FITO</item>
+        <item>32 -  DESLOC P MANUTENÇÃO</item>
+        <item>33 -  TRANSP DE EQUIPAMENTOS</item>
+        <item>34 -  APOIO A AGE</item>
+        <item>35 -  APOIO A AGF</item>
+        <item>36 -  APOIO MECÂNICO</item>
+        <item>37 -  DESLC DE CAIXA AGE</item>
+        <item>38 -  DESLC DE CAIXA AGF</item>
+        <item>39 -  FRUTOS P INDUSTRIA</item>
+        <item>40 -  ABASTECIMENTO ITINERANTE</item>
+        <item>41 -  TRANSP DE FUNCIONARIOS</item>
+    </string-array>
+    <string-array name="array_atividades_carreamento">
+        <item>CARREAMENTO</item>
+        <item>CAIXEIRO</item>
+        <item>SERVIÇOS GERAIS</item>
+        <item>SERVIÇOS ESPECIAIS</item>
+        <item>ATESTADO MÉDICO</item>
+        <item>FOLGA</item>
+        <item>FALTA</item>
+        <item>FÉRIAS</item>
+    </string-array>
+    <string-array name="array_anomalia">
+        <item>PUM: Podridão umida do meristema</item>
+        <item>PSM: Podridão seca do meristema</item>
+        <item>AV: Anel Vermelho</item>
+        <item>AF: Amarelecimento Fatal</item>
+        <item>RO: Raio</item>
+        <item>FDC: Fratura de Copa</item>
+        <item>DH: Déficit Hidrico</item>
+        <item>GS: Guia Seca</item>
+        <item>FAA: Folhas Amarelando Acima</item>
+        <item>FAT: Folha atofiadas</item>
+        <item>FIA: Frutos e Inflorecencia Abortando</item>
+        <item>PR: Perciolo Rosa</item>
+        <item>FSB: Folhas Secando a Baixo</item>
+        <item>FSBM: Folhas Secando Baixo e Médio</item>
+        <item>DG: Dano na Guia</item>
+        <item>DFG: Deficiencia Genética</item>
+        <item>DR: Dano de Rato</item>
+        <item>CR: CIRURGIA REALIZADA</item>
+        <item>CNR: CIRURGIA NÃO RECULPERANDO</item>
+        <item>CRN: CIRURGIA RECULPERANDO NORMAL</item>
+        <item>(CR, PF): CIR. RECUP. COM PEQUENAS FOLHAS</item>
+        <item>BS: BRASSOLIS</item>
+        <item>OP: OPSHIPHANES</item>
+        <item>SB: SIBINE</item>
+        <item>TA: TALIMA</item>
+        <item>EP: EUPROSTERNA</item>
+        <item>S: SAUVA</item>
+        <item>AT: AUTOMERIS</item>
+        <item>EPT: ESPOLEPTE</item>
+
+    </string-array>
+
+    <string-array name="array_combustiveis">
+        <item>SELECIONE UM ITEM</item>
+        <item>DIESEL S10</item>
+        <item>GASOLINA COMUM</item>
+        <item>GASOLINA ADITIVADA</item>
+        <item>ETANOL</item>
+        <item>ARLA 32</item>
+        <item>ÓLEO LUBRIFICANTE</item>
+    </string-array>
+    <string-array name="array_caixa_colheita">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+    </string-array>
+    <string-array name="array_industria">
+        <item>DENDE DO PARA S/A - DENPASA</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_mao_obra">MaoObra</string>
+    <string name="title_activity_main_ficha">MainFicha</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="title_activity_apontamento_patrimonio">Apontamento</string>
+    <string name="title_activity_apontamento_fito">Apontamento</string>
+    <string name="title_activity_operacoes_agricola">OPERAÇÕES AGRÍCOLAS</string>
+    <string name="title_activity_actvity_diego">ActvityDiego</string>
+    <string name="title_activity_enviar_bluetooh">EnviarBluetooh</string>
+
+    <string name="title_activity_fichade_servico">Ficha de serviço</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_epi_requisicao">Requisição de EPI</string>
+    <string name="title_activity_epimapa">Mapa de EPI</string>
+</resources>

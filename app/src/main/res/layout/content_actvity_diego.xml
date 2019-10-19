@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ryatec.syspalma.ActvityDiego"
+    tools:showIn="@layout/activity_actvity_diego">
+
+    <Spinner
+        android:id="@+id/fazenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:entries="@array/array_atividades"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fazenda">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView262"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/editText182"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:inputType="date"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="NotSibling" />
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="0"
+                    android:ems="3"
+                    android:gravity="center"
+                    android:hint="ha"
+                    android:inputType="number"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="NotSibling" />
+
+                <EditText
+                    android:id="@+id/editText4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="0"
+                    android:ems="3"
+                    android:gravity="center"
+                    android:hint="mm"
+                    android:inputType="number"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="NotSibling" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout612"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView2412"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Planted Area	 " />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editText1128"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="ha"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+            <EditText
+                android:id="@+id/editText1712"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="%"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayouta6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout62afd1"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout612"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView2324"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Harvest" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editText18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="ha"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+            <EditText
+                android:id="@+id/editText121fad37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="%"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout62afd1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView2dfad4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Flowering" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editText18dfa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="ha"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+            <EditText
+                android:id="@+id/editText1afd7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="%"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6afd12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout612"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Vegetative" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editText1i"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="ha"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+            <EditText
+                android:id="@+id/editText1a4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="%"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoufadfta6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout621"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout6afd12"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayouta6"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textVidfaew2324"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Filling Grains" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTadext18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="ha"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+            <EditText
+                android:id="@+id/editText12137"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="%"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout621"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout62afd1"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Excellent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTdfaext18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="ha"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+            <EditText
+                android:id="@+id/editText17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="%"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearfadf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6afd12"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textVidfaew12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Fair" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editfadTefaxt1i"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="ha"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+            <EditText
+                android:id="@+id/editTextfaf1a4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="%"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoufadffafdata6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/linearfadf"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoufadfta6"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textVidfaewasdf2324"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Very Poor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTaadfadext18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="ha"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+            <EditText
+                android:id="@+id/editText1fadf2137"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:hint="%"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayofadfut621"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearfadf"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textVfadfiew24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Weather &amp; Crop Remarks" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTdfaefaxt18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:gravity="center"
+                android:inputType="text|textMultiLine"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ryatec.syspalma.Apontamento$PlaceholderFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/textParcela3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Atividade"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnerAtividade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:entries="@array/array_atividades_frota"
+            android:gravity="center"
+            android:hapticFeedbackEnabled="false"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearApontamento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textParcela3"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/linearApontamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerAtividade"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setParcela"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parcela:" />
+
+                <EditText
+                    android:id="@+id/setParcelaGet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:editable="false"
+                    android:enabled="false"
+                    android:text="-" />
+
+                <EditText
+                    android:id="@+id/setParcelaNumero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:editable="false"
+                    android:enabled="false"
+                    android:text="1"
+                    android:textColor="@android:color/holo_red_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textParcela"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Parcela"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/edtParcelaRepeat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="5"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/CPF"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Linha Inicial"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textLinhaFinal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Linha Final"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/cpf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:focusable="auto"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:numeric="integer"
+                        android:text="0" />
+
+                    <EditText
+                        android:id="@+id/transportadora"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:numeric="integer"
+                        android:text="0" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textPlantas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Plantas"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textHectares"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Hectares"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/toneladas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:digits="0123456789"
+                        android:editable="false"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:inputType="number|numberSigned"
+                        android:text="0" />
+
+                    <EditText
+                        android:id="@+id/editHectares"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/lightgray"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="0" />
+
+                    <EditText
+                        android:id="@+id/editTotalPlantas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/lightgray"
+                        android:ems="10"
+                        android:enabled="true"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/swapoio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="2 Apoios"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearApontamento" />
+
+        <Switch
+            android:id="@+id/swapoio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="4 Apoios"
+            app:layout_constraintStart_toEndOf="@+id/swapoio2"
+            app:layout_constraintTop_toBottomOf="@+id/linearApontamento" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTabela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swapoio2">
+
+            <TableLayout
+                android:id="@+id/tabela_os"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="196dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="N°" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Operador" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Parcelas" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Total" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp" />
+
+                    <Spinner
+                        android:id="@+id/spinner2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/spinner4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/spinner5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/spinner7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:visibility="invisible" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="403dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/borderoperador"
+                    tools:layout_editor_absoluteX="189dp"
+                    tools:layout_editor_absoluteY="308dp">
+
+                    <EditText
+                        android:id="@+id/edt1n"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:editable="false"
+                        android:ems="2"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:tag="edt1n"
+                        android:text="1" />
+
+                    <EditText
+                        android:id="@+id/edt1maticula"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ems="5"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:tag="edt1maticula"
+                        android:text="1120" />
+
+                    <EditText
+                        android:id="@+id/edt1parc1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P1"
+                        android:inputType="number"
+                        android:tag="edt1parc1"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/edt1parc2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P2"
+                        android:inputType="number"
+                        android:tag="edt1parc2"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/edt1parc3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P3"
+                        android:inputType="number"
+                        android:tag="edt1parc3"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/edt1parc4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P4"
+                        android:inputType="number"
+                        android:tag="edt1parc4"
+                        android:textColor="@color/colorGreen" />
+
+                    <EditText
+                        android:id="@+id/edt1total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:ems="2"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:tag="edt1total"
+                        android:textStyle="bold|italic" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/linhamaq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/edithrInicial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="2"
+                        android:hint="hr Inicial"
+                        android:inputType="numberDecimal"
+                        android:tag="edithrInicial"
+                        android:visibility="invisible" />
+
+                    <Spinner
+                        android:id="@+id/spinner_patrimonio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="spinner_patrimonio" />
+
+                    <EditText
+                        android:id="@+id/edthr1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="hr Inicial"
+                        android:inputType="number|numberDecimal"
+                        android:tag="edthr1"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/edthr2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="hr Final"
+                        android:inputType="number|numberDecimal"
+                        android:tag="edthr2"
+                        android:textColor="@color/colorGreen" />
+
+                    <EditText
+                        android:id="@+id/edthrtotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:ems="2"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:hint="0.00"
+                        android:inputType="number"
+                        android:tag="edthrtotal"
+                        android:textStyle="bold|italic" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/linhaimplemento"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/nada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner_implemento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="spinner_implemento" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/idlinhaApoio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:tag="idlinhaApoio1"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/edtapoio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:editable="false"
+                        android:ems="2"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:tag="edtapoio1"
+                        android:text="1" />
+
+                    <EditText
+                        android:id="@+id/matapoio1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ems="5"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:tag="matapoio1_1"
+                        android:text="1120"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <EditText
+                        android:id="@+id/apoioparc1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P1"
+                        android:inputType="number"
+                        android:tag="apoioparc1_1"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/apoioparc2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P2"
+                        android:inputType="number"
+                        android:tag="apoioparc2_1"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/apoioparc3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P3"
+                        android:inputType="number"
+                        android:tag="apoioparc3_1"
+                        android:textColor="@color/colorGreen" />
+
+                    <EditText
+                        android:id="@+id/apoioparc4_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P4"
+                        android:inputType="number"
+                        android:tag="apoioparc4_1"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/apoiototal1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:ems="2"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:tag="apoiototal1_1"
+                        android:textStyle="bold|italic" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/idlinhaApoio2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tag="idlinhaApoio2"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/edtapoio2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:editable="false"
+                        android:ems="2"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:tag="edtapoio2"
+                        android:text="2" />
+
+                    <EditText
+                        android:id="@+id/matapoio1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ems="5"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:tag="matapoio1_2"
+                        android:text="1120"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <EditText
+                        android:id="@+id/apoioparc1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P1"
+                        android:inputType="number"
+                        android:tag="apoioparc1_2"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/apoioparc2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P2"
+                        android:inputType="number"
+                        android:tag="apoioparc2_2"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/apoioparc3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P3"
+                        android:inputType="number"
+                        android:tag="apoioparc3_2"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/apoioparc4_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P4"
+                        android:inputType="number"
+                        android:tag="apoioparc4_2"
+                        android:textColor="@color/colorGreen" />
+
+                    <EditText
+                        android:id="@+id/apoiototal1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:ems="2"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:tag="apoiototal1_2"
+                        android:textStyle="bold|italic" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/idlinhaApoio3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tag="idlinhaApoio3"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/edtapoio3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:editable="false"
+                        android:ems="2"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:tag="edtapoio3"
+                        android:text="3" />
+
+                    <EditText
+                        android:id="@+id/matapoio1_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ems="5"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:tag="matapoio1_3"
+                        android:text="1120"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <EditText
+                        android:id="@+id/apoioparc1_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P1"
+                        android:inputType="number"
+                        android:tag="apoioparc1_3"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/apoioparc2_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P2"
+                        android:inputType="number"
+                        android:tag="apoioparc2_3"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/apoioparc3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P3"
+                        android:inputType="number"
+                        android:tag="apoioparc3_3"
+                        android:textColor="@color/colorGreen" />
+
+                    <EditText
+                        android:id="@+id/apoioparc4_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P4"
+                        android:inputType="number"
+                        android:tag="apoioparc4_3"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/apoiototal1_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:ems="2"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:tag="apoiototal1_3"
+                        android:textStyle="bold|italic" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/idlinhaApoio4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tag="idlinhaApoio4"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/edtapoio4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:editable="false"
+                        android:ems="2"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:tag="edtapoio4"
+                        android:text="4" />
+
+                    <EditText
+                        android:id="@+id/matapoio1_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ems="5"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:tag="matapoio1_4"
+                        android:text="1120"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <EditText
+                        android:id="@+id/apoioparc1_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P1"
+                        android:inputType="number"
+                        android:tag="apoioparc1_4"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/apoioparc2_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P2"
+                        android:inputType="number"
+                        android:tag="apoioparc2_4"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/apoioparc3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P3"
+                        android:inputType="number"
+                        android:tag="apoioparc3_4"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <EditText
+                        android:id="@+id/apoioparc4_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="P4"
+                        android:inputType="number"
+                        android:tag="apoioparc4_4"
+                        android:textColor="@color/colorGreen" />
+
+                    <EditText
+                        android:id="@+id/apoiototal1_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:ems="2"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:tag="apoiototal1_4"
+                        android:textStyle="bold|italic" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutTabela"
+            tools:ignore="MissingConstraints">
+
+            <ImageButton
+                android:id="@+id/addLinha"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/holo_blue_light"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:src="@android:drawable/ic_menu_add"
+                android:textColor="@android:color/background_light" />
+
+            <ImageButton
+                android:id="@+id/updLinha"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/holo_orange_dark"
+                android:paddingBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:src="@android:drawable/stat_notify_sync"
+                android:textColor="@android:color/background_light" />
+
+            <TextView
+                android:id="@+id/totaParc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="?attr/colorButtonNormal"
+                android:gravity="center"
+                android:text="0.00"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/totaParc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="?attr/colorButtonNormal"
+                android:gravity="center"
+                android:text="0.00"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/totaParc3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="?attr/colorButtonNormal"
+                android:gravity="center"
+                android:text="0.00"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/totaParc4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="?attr/colorButtonNormal"
+                android:gravity="center"
+                android:text="0.00"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/totaParcTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="?attr/colorButtonNormal"
+                android:gravity="center"
+                android:text="0.00"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="88dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutAdd"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp">
+
+
+            <Button
+                android:id="@+id/salvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_dark"
+                android:text="Salvar"
+                android:textColor="@android:color/background_light" />
+
+            <Button
+                android:id="@+id/cancelar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:text="Cancelar"
+                android:textColor="@android:color/background_light" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

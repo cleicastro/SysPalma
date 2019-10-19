@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ryatec.syspalma.com.ryatec.syspalma.Apontamento">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnApontamento"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/detailsElementBackground"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:paddingRight="10dp"
+            android:text="Apontamento"
+            android:textColor="@android:color/background_dark" />
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/mExpandApontamento"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btnApontamento"
+            android:padding="16dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            app:ael_interpolator="linearOutSlowIn"
+            app:ael_orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearApontamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textParcela"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Parcela"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtAtividade"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Atividade"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:id="@+id/placa"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:hapticFeedbackEnabled="false"
+                            android:padding="10dp"
+                            android:textSize="24sp" />
+
+                        <Spinner
+                            android:id="@+id/motorista"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:hapticFeedbackEnabled="false"
+                            android:padding="10dp"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dysplayHect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold|italic" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/CPF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Linha"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/textLinhaFinal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Planta"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/cpf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="numberSigned"
+                            android:numeric="integer"
+                            android:padding="10dp"
+                            android:text="0"
+                            android:textSize="24sp" />
+
+                        <EditText
+                            android:id="@+id/transportadora"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="numberSigned"
+                            android:numeric="integer"
+                            android:padding="10dp"
+                            android:text="0"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textPlantas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Anomalia"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/textHectares"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Hectares"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinnerAnomalia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:entries="@array/array_anomalia"
+                            android:gravity="center"
+                            android:hapticFeedbackEnabled="false"
+                            android:padding="10dp"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- LUGAR ONDE ESTAVA OS CAMPOS DO APOIO
+                <LinearLayout
+                    android:id="@+id/bacajudande"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="vertical">
+
+
+
+                </LinearLayout>
+                -->
+            </LinearLayout>
+
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        <Button
+            android:id="@+id/btnColheita"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/mExpandApontamento"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/detailsElementBackground"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:paddingRight="10dp"
+            android:text="Captura de Rhynchophorus"
+            android:textColor="@android:color/background_dark" />
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/mExpandColheita"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btnColheita"
+            android:padding="16dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            app:ael_interpolator="linearOutSlowIn"
+            app:ael_orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearColheita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textCachos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Q. Macho"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/textPeso"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Q. Fêmea"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editCachos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="numberSigned"
+                            android:numeric="integer"
+                            android:padding="10dp"
+                            android:text="0"
+                            android:textSize="24sp" />
+
+                        <EditText
+                            android:id="@+id/editPeso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:editable="false"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:padding="10dp"
+                            android:text="0"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textPesoTotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Q. Total"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editPesoTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@color/lightgray"
+                            android:ems="10"
+                            android:enabled="true"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:padding="10dp"
+                            android:text="0"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textCaixa"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Armadilha"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:id="@+id/spinnerCaixa"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:entries="@array/array_caixa_colheita"
+                            android:gravity="center"
+                            android:hapticFeedbackEnabled="false"
+                            android:padding="10dp"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        <Button
+            android:id="@+id/btnPatrimonio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mExpandColheita"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/detailsElementBackground"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:paddingRight="10dp"
+            android:text="Patrimônio"
+            android:textColor="@android:color/background_dark" />
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/mExpandPatrimonio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btnPatrimonio"
+            android:padding="16dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            app:ael_interpolator="linearOutSlowIn"
+            app:ael_orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearPatrimonio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textPatrimonio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Patrimonio"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtImplemento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Implemento"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:id="@+id/spinner_patrimonio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:hapticFeedbackEnabled="false"
+                            android:padding="10dp"
+                            android:textSize="24sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_implemento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:hapticFeedbackEnabled="false"
+                            android:padding="10dp"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textkmInicial"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Horímetro/km Inicial"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/textkmFinal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Horímetro/km Final"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editkmInicial"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:padding="10dp"
+                            android:text="0"
+                            android:textSize="24sp" />
+
+                        <EditText
+                            android:id="@+id/editkmFinal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:padding="10dp"
+                            android:text="0"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/salvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_dark"
+                android:text="Salvar"
+                android:textColor="@android:color/background_light" />
+
+            <Button
+                android:id="@+id/cancelar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:text="Cancelar"
+                android:textColor="@android:color/background_light" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ryatec.syspalma.com.ryatec.syspalma.Apontamento">
+    <item
+        android:id="@+id/ed_save2"
+        android:actionLayout="@layout/activity_painel"
+        android:icon="@drawable/ic_envira"
+        android:showAsAction="withText|ifRoom"
+        android:title="@string/action_settings"
+        app:actionLayout="@layout/activity_painel"
+        app:showAsAction="withText|ifRoom"
+        tools:ignore="AppCompatResource" />
+
+    <item
+        android:id="@+id/ed_save3"
+        android:actionLayout="@layout/activity_painel"
+        android:icon="@drawable/ic_envira"
+        android:showAsAction="withText|ifRoom"
+        android:title="@string/action_settings"
+        app:actionLayout="@layout/activity_painel"
+        app:showAsAction="withText|ifRoom"
+        tools:ignore="AppCompatResource" />
+
+    <item
+        android:id="@+id/ed_save4"
+        android:actionLayout="@layout/activity_painel"
+        android:icon="@drawable/ic_envira"
+        android:showAsAction="withText|ifRoom"
+        android:title="@string/action_settings"
+        app:actionLayout="@layout/activity_painel"
+        app:showAsAction="withText|ifRoom"
+        tools:ignore="AppCompatResource" />
+</menu>

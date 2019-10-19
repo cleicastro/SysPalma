@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ryatec.syspalma">
+
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".EPIMapa"
+            android:label="@string/title_activity_epimapa"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".EPI_requisicao"
+            android:label="@string/title_activity_epi_requisicao"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AgricolaProgForm" />
+        <activity android:name=".AgricolaiProgCaixa" />
+        <activity android:name=".AGFIndustria.AGFProgForm" />
+        <activity android:name=".AGFIndustria.AGFProgCaixaCampo" />
+        <activity android:name=".SysPalmaOnlineOS" />
+        <activity android:name=".BuscaMatriculaApontamento" />
+
+        <service android:name=".FireBaseNoticifacaoService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".FireBaseInstaceService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCEID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ActivitySplash"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="OPEN_ACTIVITY_1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Apontamento"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FichadeServico"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ApontamentoFragment"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Painel"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PainelAbastecimento"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AbastecimentosTanque"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Frota_Abastecimento_externo"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Frota_Abastecimento_interno"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Colheita"
+            android:label="@string/title_activity_colheita"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tratos"
+            android:label="@string/title_activity_frota"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Fito"
+            android:label="@string/title_activity_fito"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuOperacoes"
+            android:label="@string/title_activity_colheita"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuOperacoesFrota"
+            android:label="@string/title_activity_frota"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuOperacoesFitossanidade"
+            android:label="@string/title_activity_fito"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuOperacoesEPI"
+            android:label="@string/title_activity_fito"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MaoObra"
+            android:label="@string/title_activity_colheita"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchhable" />
+        </activity>
+        <activity
+            android:name=".AgricolaProgCaixa"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AgricolaProgramacaoList"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AGFIndustria.AGFProgCaixa"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AGFIndustria.AGFProgramacaoList"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AgricolaPluviometria"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AgricolaPluviometriaList"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainFicha"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainFichaFrota"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AbastecimentosFrota"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainFichaGeral"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DeviceListActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainAbastecimentosTanque"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".imprimir"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <activity
+            android:name=".Frota_Abastecimento_tanque"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".imprimir_listActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <activity
+            android:name=".FichaNovo"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <activity
+            android:name=".FichaNovoFrota"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <activity
+            android:name=".ListaApontamentoBackup"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <activity
+            android:name=".Login"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EditarApontamento"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <activity
+            android:name=".EditarMaquinario"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <activity android:name=".Configuracao" />
+        <activity
+            android:name=".ApontamentoPatrimonio"
+            android:label="@string/title_activity_apontamento_patrimonio"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ApontamentoFito"
+            android:label="@string/title_activity_apontamento_fito"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OperacoesAgricola"
+            android:label="@string/title_activity_operacoes_agricola"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ApontamentoLista"
+            android:label="@string/title_activity_operacoes_agricola"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SyspalmaOnline"
+            android:label="@string/title_activity_operacoes_agricola"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PainelProducaoOline"
+            android:label="@string/title_activity_operacoes_agricola"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActvityDiego"
+            android:label="@string/title_activity_actvity_diego"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ryatec.syspalma.SyspalmaOnline">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_gradient_end"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <Switch
+            android:id="@+id/protocolado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Protocolados"
+            android:textAppearance="@style/AppTabTextAppearance"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/fazendas"
+            style="@style/Widget.AppCompat.Spinner.DropDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_atividades"
+            android:padding="10dp" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main_ficha" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/atualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@color/colorGreen"
+        app:srcCompat="@android:drawable/ic_popup_sync" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/enviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        app:backgroundTint="@color/yello"
+        app:srcCompat="@drawable/ic_caminhao_frota"
+        tools:ignore="VectorDrawableCompat" />
+
+</android.support.design.widget.CoordinatorLayout>

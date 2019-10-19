@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "730783830226",
+    "firebase_url": "https://syspalma-19091986.firebaseio.com",
+    "project_id": "syspalma-19091986",
+    "storage_bucket": "syspalma-19091986.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730783830226:android:8abb8afc34037b1b",
+        "android_client_info": {
+          "package_name": "com.syspalma.syspalma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730783830226-v70jd1vip34u8sa59h91fu4vsen363lb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv3rQrOrKNGDY5ZuTK2l-u1RAgjWfm0tg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

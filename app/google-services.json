@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "730783830226",
+    "firebase_url": "https://syspalma-19091986.firebaseio.com",
+    "project_id": "syspalma-19091986",
+    "storage_bucket": "syspalma-19091986.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730783830226:android:8abb8afc34037b1b",
+        "android_client_info": {
+          "package_name": "com.ryatec.syspalma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730783830226-ghi3k5u9egrqtrtue9stc8ep74tta98m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ryatec.syspalma",
+            "certificate_hash": "14e2dc1e7753030832aff14cb10ba6d97fe206de"
+          }
+        },
+        {
+          "client_id": "730783830226-v70jd1vip34u8sa59h91fu4vsen363lb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv3rQrOrKNGDY5ZuTK2l-u1RAgjWfm0tg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730783830226-v70jd1vip34u8sa59h91fu4vsen363lb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
