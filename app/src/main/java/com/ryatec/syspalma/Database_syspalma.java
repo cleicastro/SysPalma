@@ -9,10 +9,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.ryatec.syspalma.AGFIndustria.GetSetProgCaixaAGF;
+import com.ryatec.syspalma.PointCaixa.GetSetPointCaixa;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,7 +31,7 @@ public class Database_syspalma extends SQLiteOpenHelper {
     /**
      * A versão da base de dados
      */
-    private static final int VERSAO_BD = 26;
+    private static final int VERSAO_BD = 27;
     /**
      * Diretório do banco de dados
      */
@@ -354,6 +354,18 @@ public class Database_syspalma extends SQLiteOpenHelper {
                 "  vencimento_dap       DATE    NOT NULL\n" +
                 ")";
 
+        String apontamento_caixa = "CREATE TABLE apontamento_caixa (\n" +
+                "  idapontamento_caixa INTEGER     PRIMARY KEY AUTOINCREMENT,\n" +
+                "  data      DATETIME,\n" +
+                "  id_patrimonio      INTEGER,\n" +
+                "  caixa  INTEGER,\n" +
+                "  matricula VARCHAR (45)  NOT NULL,\n" +
+                "  local    VARCHAR(45)    NOT NULL,\n" +
+                "  tatitude REAL       NOT NULL,\n" +
+                "  longitude REAL      NOT NULL,\n" +
+                "  apontamento VARCHAR (45)      NOT NULL\n" +
+                ")";
+
         db.execSQL(c_fornecedor);
         db.execSQL(c_insumo);
         db.execSQL(atividade);
@@ -383,6 +395,7 @@ public class Database_syspalma extends SQLiteOpenHelper {
         db.execSQL(filtro_producao);
         db.execSQL(industria_programacao_agf);
         db.execSQL(agf_agricultor);
+        db.execSQL(apontamento_caixa);
         db.execSQL("PRAGMA foreign_keys = ON;");
     }
 
@@ -419,6 +432,7 @@ public class Database_syspalma extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS filtro_producao");
         db.execSQL("DROP TABLE IF EXISTS agf_industria_programacao");
         db.execSQL("DROP TABLE IF EXISTS agf_agricultor");
+        db.execSQL("DROP TABLE IF EXISTS apontamento_caixa");
         onCreate(db);
     }
 
@@ -488,6 +502,12 @@ public class Database_syspalma extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL(upd);
         db.execSQL(strSQLabastecimento);
+        db.close();
+    }
+    public void deletarApontamentoCaixa(int id){
+        String upd = "DELETE FROM apontamento_caixa WHERE idapontamento_caixa = "+ id;
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL(upd);
         db.close();
     }
     public void deletarAbastecimentoTanque(String id){
@@ -1307,6 +1327,38 @@ public class Database_syspalma extends SQLiteOpenHelper {
         }else{
             HashMap<String, String> map = new HashMap<String, String>();
             map.put("km_horimetro", "Nenhuma abastecimento armazenado)");
+            usersList.add(map);
+        }
+        database.close();
+        return usersList;
+    }
+    public ArrayList<HashMap<String, String>> ListaPointCaixa() {
+        ArrayList<HashMap<String, String>> usersList;
+        usersList = new ArrayList<HashMap<String, String>>();
+        StringBuilder selectQuery = new StringBuilder();
+        selectQuery.append("SELECT ac.idapontamento_caixa, strftime('%d/%m/%Y', data) as data,  p.descricao, caixa, matricula, local, apontamento  FROM apontamento_caixa ac");
+        selectQuery.append(" INNER JOIN c_patrimonio p");
+        selectQuery.append(" ON p.idpatrimonio = ac.id_patrimonio");
+        selectQuery.append(" ORDER BY data");
+
+        SQLiteDatabase database = this.getWritableDatabase();
+        Cursor cursor = database.rawQuery(selectQuery.toString(), null);
+        if (cursor.moveToFirst()) {
+            do {
+                HashMap<String, String> map = new HashMap<String, String>();
+
+                map.put("idapontamento_caixa", cursor.getString(0)); //código do abastecimento
+                map.put("data", cursor.getString(1)); //data formatada
+                map.put("descricao", cursor.getString(2));
+                map.put("caixa",cursor.getString(3));
+                map.put("matricula",cursor.getString(4));
+                map.put("local",cursor.getString(5));
+                map.put("apontamento", cursor.getString(6));
+                usersList.add(map);
+            } while (cursor.moveToNext());
+        }else{
+            HashMap<String, String> map = new HashMap<String, String>();
+            map.put("descricao", "Nenhuma registro armazenado)");
             usersList.add(map);
         }
         database.close();
@@ -2582,6 +2634,36 @@ public class Database_syspalma extends SQLiteOpenHelper {
         return dataArrays;
     }
 
+    public ArrayList<JSONObject> SelectApontamentoCaixaSync() {
+        ArrayList<JSONObject> dataArrays = new ArrayList<>();
+        StringBuilder selectQuery = new StringBuilder();
+        selectQuery.append("SELECT  * FROM apontamento_caixa");
+
+        SQLiteDatabase database = this.getWritableDatabase();
+        Cursor cursor = database.rawQuery(selectQuery.toString(), null);
+        if (cursor.moveToFirst()) {
+            do {
+                JSONObject jsonObject = new JSONObject();
+                try {
+                    jsonObject.put("data",cursor.getString(1));
+                    jsonObject.put("id_patrimonio",cursor.getString(2));
+                    jsonObject.put("caixa",cursor.getString(3));
+                    jsonObject.put("matricula", cursor.getString(4));
+                    jsonObject.put("local",cursor.getString(5));
+                    jsonObject.put("tatitude",cursor.getString(6));
+                    jsonObject.put("longitude",cursor.getString(7));
+                    jsonObject.put("apontamento", cursor.getString(8));
+
+                    dataArrays.add(jsonObject);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            } while (cursor.moveToNext());
+        }
+        database.close();
+        return dataArrays;
+    }
+
     public ArrayList<JSONObject> SelectRealizadoPatrimonioFrotaSync(String responsavel) {
         ArrayList<JSONObject> dataArrays = new ArrayList<>();
         StringBuilder selectQuery = new StringBuilder();
@@ -2693,6 +2775,15 @@ public class Database_syspalma extends SQLiteOpenHelper {
         db.execSQL(selectRealizado);
         db.close();
     }
+    public void deletarSyncApontamentoCaixa(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        //DELETAR O APONTAMENTO
+        StringBuilder deleteApontamento = new StringBuilder();
+        deleteApontamento.append(" DELETE FROM apontamento_caixa");
+        db.execSQL(deleteApontamento.toString());
+        db.close();
+    }
+
     public void deletarSyncFrota(String responsavel){
         SQLiteDatabase db = this.getWritableDatabase();
         String where_set = " WHERE (marcador_final - marcador_inicial) > 0 AND matricula_mdo = '" + responsavel+"'";
@@ -2811,5 +2902,23 @@ public class Database_syspalma extends SQLiteOpenHelper {
         }
         database.close();
         return queryValues;
+    }
+
+    public void InserirApontamentoCaixa(GetSetPointCaixa pointCaixa) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        //INSERIR O PATIMONIO
+        ContentValues pontoCaixa = new ContentValues();
+        pontoCaixa.put("data", pointCaixa.getData());
+        pontoCaixa.put("id_patrimonio", pointCaixa.getId_patrimonio());
+        pontoCaixa.put("caixa", pointCaixa.getCaixa());
+        pontoCaixa.put("matricula",pointCaixa.getMatricula());
+        pontoCaixa.put("local",pointCaixa.getLocal());
+        pontoCaixa.put("tatitude", pointCaixa.getLatitude());
+        pontoCaixa.put("longitude", pointCaixa.getLongitude());
+        pontoCaixa.put("apontamento", pointCaixa.getId_apontamento());
+
+        db.insert("apontamento_caixa", null, pontoCaixa);
+        db.close();
     }
 }

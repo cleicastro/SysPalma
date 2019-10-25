@@ -84,6 +84,14 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".PointCaixa.PontosList"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PointCaixa.AtividadeCaixa"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".FichadeServico"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />

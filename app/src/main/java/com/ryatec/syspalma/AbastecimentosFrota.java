@@ -32,6 +32,7 @@ public class AbastecimentosFrota extends AppCompatActivity {
     private String insertReturn = "não";
     private GetSetCache getSetCache = new GetSetCache();
 
+    @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
