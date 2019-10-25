@@ -375,10 +375,42 @@ public class AGFProgForm extends AppCompatActivity {
 
         //CORPO DO EMAIL
         StringBuilder email = new StringBuilder();
+        email.append("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\"\n" +
+                "\"http://www.w3.org/TR/REC-html40/loose.dtd\"><html><head>\n" +
+                "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n" +
+                "<title></title>\n" +
+                "</head>\n" +
+                "<body style=\"font-family:Arial;font-size:14px\">");
         email.append("Data: " + data_completa);
         email.append("<br /> Protocolo: " + protocolo);
         email.append("<div style='border: 1px solid; text-align: center; padding: 5px; margin-button: 10px; background:yellow'>AGRICULTURA FAMILIAR</div>");
+
         for (int i = 0; i < valores.size(); i++) {
+            email.append(
+                    "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:100%\">\n" +
+                    //"<caption>AGF</caption>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td>Agricultor</td>\n" +
+                    "<td>"+ fazendas.get(i).toString()+"</td>\n" +
+                    "</tr>\n" +
+                    "<tr>\n" +
+                    "<td>CPF</td>\n" +
+                    "<td>"+ cheia.get(i).toString() +"</td>\n" +
+                    "</tr>\n" +
+                    "<tr>\n" +
+                    "<td>Peso</td>\n" +
+                    "<td>"+ ton.get(i).toString() +"</td>\n" +
+                    "</tr>\n" +
+                    "<tr>\n" +
+                    "<td>Caixa</td>\n" +
+                    "<td>"+caixas.get(i).toString()+"</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<p></p>");
+            /*
             email.append("<div style='border: 1px solid; float: left; padding: 5px; width:200px'>");
             email.append("<div>Agricultor</div>");
             email.append("<div>CPF</div>");
@@ -392,11 +424,54 @@ public class AGFProgForm extends AppCompatActivity {
             email.append("<div style='green'>" + caixas.get(i).toString() + "</div>");
             email.append("<div>" + ton.get(i).toString() + "</div>");
             email.append("</div>");
+
+             */
         }
         email.append("<p />");
         //RODAPÉ DO EMAIL
         JSONObject obj_valores_rodape = valores.get(0);
         try {
+            email.append(
+                    "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:100%\">\n" +
+                        "<caption>Resumo</caption>\n" +
+                        "<tbody>\n" +
+                        "<tr>\n" +
+                        "<td>Caixa</td>\n" +
+                        "<td>"+ caixas.get(0).toString()+"</td>\n" +
+                        "</tr>\n" +
+                        "<tr>\n" +
+                        "<td>Toneladas</td>\n" +
+                        "<td>"+ obj_valores_rodape.get("toneladas").toString() +"</td>\n" +
+                        "</tr>\n" +
+                        "<tr>\n" +
+                        "<td>Placa</td>\n" +
+                        "<td>"+ obj_valores_rodape.get("placa").toString() +"</td>\n" +
+                        "</tr>\n" +
+                        "<tr>\n" +
+                        "<td>Motorista</td>\n" +
+                        "<td>"+obj_valores_rodape.get("motorista").toString()+"</td>\n" +
+                        "</tr>\n" +
+                        "<tr>\n" +
+                        "<td>CPF</td>\n" +
+                        "<td>"+obj_valores_rodape.get("cpf").toString()+"</td>\n" +
+                        "</tr>\n" +
+                        "<tr>\n" +
+                        "<td>Transportadora</td>\n" +
+                        "<td>"+obj_valores_rodape.get("transportadora").toString()+"</td>\n" +
+                        "</tr>\n" +
+                        "<td>Caixa Cheia</td>\n" +
+                        "<td>"+ref_caixa_cheia.get(0).toString()+"</td>\n" +
+                        "</tr>\n" +
+                        "<tr>\n" +
+                        "<td>Caixa Vazia</td>\n" +
+                        "<td>"+vazia.getText().toString()+"</td>\n" +
+                        "</tr>\n" +
+                        "</tbody>\n" +
+                        "</table>\n" +
+                        "<p>&nbsp;</p>\n" +
+                        "</div>\n" +
+                        "<p><br></p>");
+            /*
             email.append("<div style='border: 1px solid; float: left; padding: 5px; width:200px'>");
             email.append("<div>Caixa</div>");
             email.append("<div>Toneladas</div>");
@@ -410,7 +485,6 @@ public class AGFProgForm extends AppCompatActivity {
 
             email.append("<div style='border: 1px solid; padding: 5px; margin-button: 10px;'>");
             email.append("<div>");
-            /*
             for (int i = 0; i < caixas.size(); i++) {
                 if( i > 0 && caixas.get(i).toString() != caixas.get(i-1).toString()){
                     email.append(caixas.get(i).toString()+" | ");
@@ -418,7 +492,7 @@ public class AGFProgForm extends AppCompatActivity {
                     email.append(caixas.get(i).toString()+" | ");
                 }
             }
-             */
+
             email.append(caixas.get(0).toString());
             email.append("</div>");
             email.append("<div>" + obj_valores_rodape.get("toneladas").toString() + "</div>");
@@ -429,6 +503,9 @@ public class AGFProgForm extends AppCompatActivity {
             email.append("<div>" + ref_caixa_cheia.get(0).toString() + "</div>");
             email.append("<div>" + vazia.getText().toString() + "</div>");
             email.append("</div>");
+             */
+            email.append("</body>\n" +
+                    "</html>");
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -438,11 +515,10 @@ public class AGFProgForm extends AppCompatActivity {
                 "SysPalma <br />" +
                 "Transporte de CFF AGF<br />");
 
-        String[] TO = {"rhael.pereira@adm.com", "cleicastro.ti@hotmail.com"};
-        //String[] TO = {"joel.cavalcante@adm.com", "rita.viana@adm.com"};
+        String[] TO = {"joel.cavalcante@adm.com", "rita.viana@adm.com"};
 
         String[] CC = new String[0];
-        /*
+
         if (transportadora.getText().toString().equals("AWE")) {
             CC = new String[]{
                     "erasmo.ferreira@adm.com",
@@ -475,7 +551,7 @@ public class AGFProgForm extends AppCompatActivity {
                     "antonio.rolim@adm.com"
             };
         }
-        */
+
 
         String titulo = protocolo + " " + data_completa;
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
